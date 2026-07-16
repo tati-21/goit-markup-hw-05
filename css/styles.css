@@ -43,6 +43,20 @@ ol {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* #endregion*/
 
 /* #region Header section */
@@ -197,18 +211,6 @@ ol {
   background-color: #404bbf;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 /* #endregion*/
 
 /* #region Benefits section */
@@ -498,6 +500,18 @@ ol {
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .modal {
@@ -506,7 +520,6 @@ ol {
   left: 50%;
 
   width: 408px;
-  height: 584px;
   padding: 72px 24px 24px;
 
   transform: translate(-50%, -50%);
@@ -631,7 +644,7 @@ ol {
 }
 /* #endregion */
 
-/* #region Modal window: TEXTAREA + CHECKBOX */
+/* #region Modal window: Textarea + Checkbox */
 
 .modal-textarea-wrapper {
   display: flex;
@@ -673,6 +686,80 @@ ol {
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: black;
+}
+
+.policy-wrapper {
+  margin-bottom: 24px;
+}
+
+.policy-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  cursor: pointer;
+}
+
+.policy-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  fill: transparent;
+
+  transition-property: background-color, border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:checked + .policy-label > .policy-checkbox {
+  background-color: #404bbf;
+  border-color: #404bbf;
+  fill: #f4f4fd;
+
+  /* border-radius: 2px; */
+}
+
+.policy-link {
+  line-height: 1.33333;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+
+.modal-form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 169px;
+  height: 56px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #4d5ae5;
+  border: none;
+  padding: 0%;
+  margin: 0 auto;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background-color: #404bbf;
 }
 
 /* #endregion */

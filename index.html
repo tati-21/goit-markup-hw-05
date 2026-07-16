@@ -1,4 +1,4 @@
-p<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -625,13 +625,13 @@ p<!doctype html>
 
         <form class="modal-form">
           <div class="modal-form-wrapper">
-            <label class="modal-form-label" for="name">Name</label>
+            <label class="modal-form-label" for="user-name">Name</label>
             <div class="modal-input-wrapper">
               <input
                 class="modal-form-input"
                 type="text"
-                name="name"
-                id="name"
+                name="user-name"
+                id="user-name"
               />
               <svg class="modal-form-icon" width="18" height="24">
                 <use href="./images/icons.svg#person-black"></use>
@@ -640,13 +640,13 @@ p<!doctype html>
           </div>
 
           <div class="modal-form-wrapper">
-            <label class="modal-form-label" for="phone">Phone</label>
+            <label class="modal-form-label" for="user-phone">Phone</label>
             <div class="modal-input-wrapper">
               <input
                 class="modal-form-input"
                 type="tel"
-                name="phone"
-                id="phone"
+                name="user-phone"
+                id="user-phone"
               />
               <svg class="modal-form-icon" width="18" height="24">
                 <use href="./images/icons.svg#phone-black"></use>
@@ -655,13 +655,13 @@ p<!doctype html>
           </div>
 
           <div class="modal-form-wrapper">
-            <label class="modal-form-label" for="email">Email</label>
+            <label class="modal-form-label" for="user-email">Email</label>
             <div class="modal-input-wrapper">
               <input
                 class="modal-form-input"
                 type="email"
-                name="email"
-                id="email"
+                name="user-email"
+                id="user-email"
               />
               <svg class="modal-form-icon" width="18" height="24">
                 <use href="./images/icons.svg#email-black"></use>
@@ -670,33 +670,34 @@ p<!doctype html>
           </div>
 
           <div class="modal-textarea-wrapper">
-            <label class="modal-form-label" for="comment">Comment</label>
+            <label class="modal-form-label" for="user-comment">Comment</label>
             <textarea
               class="modal-form-textarea"
-              name="comment"
-              id="comment"
+              name="user-comment"
+              id="user-comment"
               placeholder="Text input"
             ></textarea>
           </div>
 
           <div class="policy-wrapper">
             <input
-              class="checkbox-input sr-only"
+              class="checkbox-input visually-hidden"
               type="checkbox"
-              name="checkbox"
-              id="checkbox"
+              name="user-privacy"
+              id="user-privacy"
             />
-          </div>
 
-          <label for="checkbox">
-            <span>
-              <svg width="10" height="8">
-                <use href="./images/icons.svg#icon-check"></use>
-              </svg>
-            </span>
-            I accept the terms and conditions of the
-            <a href="">Privacy Policy</a></label
-          >
+            <label class="policy-label" for="user-privacy">
+              <span class="policy-checkbox">
+                <svg width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="" class="policy-link">Privacy Policy</a></label
+            >
+          </div>
+          <button class="modal-form-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
