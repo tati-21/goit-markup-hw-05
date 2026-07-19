@@ -739,7 +739,6 @@ ol {
 }
 
 .modal-form-input,
-.modal-form-textarea,
 .modal-form-textarea::placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -749,8 +748,7 @@ ol {
 }
 
 /* Введення тексту в поля (колір) */
-.modal-form-input,
-.modal-form-textarea {
+.modal-form-input {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16667;
